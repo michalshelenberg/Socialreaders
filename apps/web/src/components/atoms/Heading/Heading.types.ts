@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react";
 
-export type HeadingVariants = "md" | "lg";
+export type HeadingVariants = "md" | "lg" | "sm";
 export type HeadingElementTypes =
   | "h1"
   | "h2"

@@ -10,9 +10,10 @@ This repository serves as my portfolio project. It features a frontend web app b
 - [x] Accessible components using React Aria
 - [x] Smooth page transitions using View Transitions API
 - [ ] Internationalization using next-i18next
-- [ ] TypeScript type generation from OpenAPI specifications
-- [ ] Client-side form validation using Zod
-- [ ] Database using PostgreSQL
-- [ ] Authentication using NextAuth.js
+- [x] TypeScript type generation from OpenAPI specifications
+- [x] Client-side form validation using Zod
+- [x] Database using PostgreSQL
+- [x] Authentication using NextAuth.js
 - [ ] Add and manage custom books in user library
-- [ ] Code formatting and linting with custom ESLint rules
+- [ ] Code linting and formatting with custom ESLint rules
+- [x] Route protection with public and authenticated pages using Next.js parallel routes

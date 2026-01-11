@@ -6,17 +6,23 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate:api": "openapi-typescript http://localhost:5065/swagger/v1/swagger.json -o ./src/lib/api/schema.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
     "next": "15.5.9",
+    "next-auth": "^5.0.0-beta.30",
     "next-view-transitions": "^0.3.5",
+    "openapi-fetch": "^0.15.0",
     "overlayscrollbars": "^2.13.0",
     "react": "19.1.0",
     "react-aria-components": "^1.14.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.71.0",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -26,6 +32,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.9",
+    "openapi-typescript": "^7.10.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "sass": "^1.97.2",
     "tailwindcss": "^4",
     "typescript": "^5"
