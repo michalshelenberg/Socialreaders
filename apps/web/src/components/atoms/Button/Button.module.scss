@@ -1,0 +1,40 @@
+.button {
+  --button-padding: 0.625rem 1rem;
+  --button-font-size: 1rem;
+  --button-line-height: 1.5;
+  --button-border-radius: 0.375rem;
+  --button-background-color: transparent;
+  --button-color: inherit;
+  --button-border: none;
+  --button-transition: all 0.2s ease-in-out;
+
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  font-weight: 500;
+  line-height: var(--button-line-height);
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  transition: var(--button-transition);
+  user-select: none;
+
+  &:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+}
+
+.button--primary {
+  --button-background-color: var(--collection-blue-default);
+  --button-color: #ffffff;
+  --button-border-radius: 0.375rem;
+
+  &:hover:not(:disabled) {
+    --button-background-color: #1a4548;
+  }
+}

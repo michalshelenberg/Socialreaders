@@ -1,6 +1,9 @@
+import { Footer, Header, OverlayScrollbar } from "@/components/organisms";
+import "@/styles/globals.scss";
 import type { Metadata } from "next";
+import { ViewTransitions } from "next-view-transitions";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <ViewTransitions>
+    <html lang="en" data-overlayscrollbars-initialize>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
+        <OverlayScrollbar />
       </body>
     </html>
+    </ViewTransitions>
   );
 }

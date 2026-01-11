@@ -1,103 +1,122 @@
-import Image from "next/image";
+import { ButtonLink, Heading, Text } from "@/components/atoms";
+import { Container } from "@/components/layout";
+import { Marquee } from "@/components/molecules";
+import { FeatureSection } from "@/features/homepage/componens";
+import { Gem } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      <Container>
+        <div
+          className="min-h-[calc(100dvh-200px)] w-full overflow-hidden rounded-t-3xl rounded-b-3xl bg-[#F6F2EA]"
+          style={{ viewTransitionName: "main-container" }}
+        >
+          <section className="my-16">
+            <div className="grid-auto">
+              <div className="col-[2/12] lg:col-[3/7] 2xl:col-[4/7]">
+                <Heading variant="lg">
+                  Build Your Library <br />
+                  Borrow From Others
+                </Heading>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              <div className="col-[2/12] flex flex-col items-start gap-8 lg:col-[7/11] 2xl:col-[7/10]">
+                <Text as="p" size="md">
+                  Socialreaders lets you add custom titles—even those missing
+                  from our database. You can also borrow books directly from
+                  fellow readers in the community.
+                </Text>
+                <ButtonLink href={"/sign-in"} variant="primary">
+                  Create a Free Account
+                </ButtonLink>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-16">
+            <Marquee
+              images={[
+                {
+                  src: "/images/homepage/twenty-thousand-leagues-under-the-sea@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/krakatit@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/javascript-the-definitive-guide@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/druha-nadace@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/just-kids@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/mindfuck@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/permanent-record@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+                {
+                  src: "/images/homepage/sapiens@2x.jpg",
+                  alt: "",
+                  width: 278,
+                  height: 418,
+                },
+              ]}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </section>
+
+          <FeatureSection
+            image={{
+              src: "https://via.assets.so/img.jpg?w=400&h=300&bg=e5e7eb&f=png",
+              alt: "Feature Section 1",
+            }}
+            icon={<Gem />}
+            title="Feature Section 1"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              aut, impedit cupiditate inventore, quaerat eum sit ipsa eveniet
+              est nisi accusantium perspiciatis itaque sequi error quo delectus
+              iusto repudiandae optio!"
+          />
+
+          <FeatureSection
+            image={{
+              src: "https://via.assets.so/img.jpg?w=400&h=300&bg=e5e7eb&f=png",
+              alt: "Feature Section 1",
+            }}
+            icon={<Gem />}
+            title="Feature Section 2"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              aut, impedit cupiditate inventore, quaerat eum sit ipsa eveniet
+              est nisi accusantium perspiciatis itaque sequi error quo delectus
+              iusto repudiandae optio!"
+            inverted
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </Container>
+    </main>
   );
 }
