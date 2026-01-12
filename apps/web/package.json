@@ -7,6 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
     "generate:api": "openapi-typescript http://localhost:5065/swagger/v1/swagger.json -o ./src/lib/api/schema.ts"
   },
   "dependencies": {
@@ -26,16 +28,19 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@storybook/nextjs": "^10.1.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.9",
+    "eslint-plugin-storybook": "^10.1.11",
     "openapi-typescript": "^7.10.1",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "sass": "^1.97.2",
+    "storybook": "^10.1.11",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
