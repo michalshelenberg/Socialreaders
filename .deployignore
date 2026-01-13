@@ -1,0 +1,2 @@
+# Ignore the apps folder during Azure deployment
+apps/
